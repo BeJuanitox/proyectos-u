@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Furmulario</title>
+</head>
+
+<body>
+  <div class="tittle">
+    <h1>Formulario tabla dinamica</h1>
+  </div>
+  <div class="container">
+    <form action="">
+      <div class="form-group">
+        <input class="form-control" type="text" id="nombre" placeholder="Nombre" onkeypress="return sololetras(event)"
+          onpaste="return false">
+        <input class="form-control" type="text" id="apellido" placeholder="Apellido"
+          onkeypress="return sololetras(event)" onpaste="return false">
+      </div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input class="form-control" type="text" id="email" placeholder="Correo electronico">
+        <!-- Los correos validan: hotmail.com - hotmail.es - gmail.com -->
+      </div>
+      <div class="buttons">
+        <button type="button" class="btn btn-outline-primary" id="insertar">Insertar</button>
+        <button type="button" class="btn btn-outline-secondary" id="recorrer">Recorrer tabla</button>
+      </div>
+    </form>
+
+    <div class="containertable table-responsive">
+      <table class="table table-striped table-bordered table-hover" id="tabladatos">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

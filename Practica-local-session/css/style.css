@@ -1,0 +1,40 @@
+.tittle {
+  text-align: center;
+  margin: 50px auto;
+  color: black;
+}
+
+.usuario1 {
+  background: skyblue;
+  color: blue;
+}
+
+.usuario2 {
+  background: lightgreen;
+  color: green;
+}
+
+.form-group,
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  gap: 15px;
+}
+
+.botones {
+  gap: 20px;
+}
+
+#cargar {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.containerLog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

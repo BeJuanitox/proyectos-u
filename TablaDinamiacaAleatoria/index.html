@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Furmulario</title>
+</head>
+
+<body>
+    <div class="tittle">
+        <h1>Tabla automática</h1>
+    </div>
+    <div class="container">
+        <form action="">
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-primary" id="generar">Generar</button>
+                <button type="button" class="btn btn-outline-secondary" id="recorrer">Resaltar</button>
+                <select class="select" id="seleccion">
+                    <option>Todos</option>
+                    <option value="Mayores">Mayores</option>
+                    <option value="Menores">Menores</option>
+                    <option value="Hombres">Hombres</option>
+                    <option value="Mujeres">Mujeres</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="containertable table-responsive">
+            <table class="table table-striped table-bordered table-hover" id="tabladatos">
+                <tr>
+                    <th>ID</th>
+                    <th id="namein">Nombre</th>
+                    <th>Genero</th>
+                    <th>Edad</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

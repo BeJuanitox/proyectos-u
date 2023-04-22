@@ -5,3 +5,8 @@ Here you can find some projects, homeworks, and other things that I had to send.
 ### Languages ​​used
 - C++
 - Java
+- Javascript
+
+### Label languges
+- HTML
+- CSS

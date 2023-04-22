@@ -24,7 +24,7 @@ public class tripleta {
         Matriz[i][j] = d;
     }
 
-    public void constuir(int[][] matriz, int ContadorDato) {
+    public void constuir(int[][] matriz, int ContDato) {
         if (matriz == null || matriz.length == 0 || matriz[0].length == 0) {
             return;
         }
@@ -33,7 +33,7 @@ public class tripleta {
 
         Matriz[0][0] = matriz.length;
         Matriz[0][1] = matriz[0].length;
-        Matriz[0][2] = ContadorDato;
+        Matriz[0][2] = ContDato;
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
@@ -60,20 +60,13 @@ public class tripleta {
         int[][] T1 = this.getMatriz();
         int[][] T2 = otra.getMatriz();
 
-        int i = 1, j = 1, k = 1;
-        int fila1 = T1[0][0], columna1 = T1[0][1], dato1 = T1[0][2];
-        int fila2 = T2[0][0], columna2 = T2[0][1], dato2 = T2[0][2];
+        int i = 1, j = 1, k = 1, contDato = 0;
+        int fil1 = T1[0][0], col1 = T1[0][1], dato1 = T1[0][2];
+        int dato2 = T2[0][2];
         int[][] resultado = new int[dato1 + dato2 + 1][3];
 
-        if (fila1 != fila2 || columna1 != columna2) {
-            System.out.println("Las matrices no son del mismo tamaño.");
-            return null;
-        }
-
-        resultado[0][0] = fila1;
-        resultado[0][1] = columna1;
-
-        int contadorDato = 0;
+        resultado[0][0] = fil1;
+        resultado[0][1] = col1;
 
         while (i <= dato1 && j <= dato2 && i != 0 && j != 0) {
             if (T1[i][0] < T2[j][0] || (T1[i][0] == T2[j][0] && T1[i][1] < T2[j][1])) {
@@ -93,7 +86,7 @@ public class tripleta {
                 i++;
                 j++;
             }
-            contadorDato++;
+            contDato++;
             k++;
         }
 
@@ -102,7 +95,7 @@ public class tripleta {
             resultado[k][1] = T1[i][1];
             resultado[k][2] = T1[i][2];
             i++;
-            contadorDato++;
+            contDato++;
             k++;
         }
 
@@ -111,14 +104,14 @@ public class tripleta {
             resultado[k][1] = T2[j][1];
             resultado[k][2] = T2[j][2];
             j++;
-            contadorDato++;
+            contDato++;
             k++;
         }
 
-        resultado[0][2] = contadorDato;
-        tripleta T = new tripleta(contadorDato);
+        resultado[0][2] = contDato;
+        tripleta T = new tripleta(contDato);
         T.setMatriz(resultado);
         return T;
     }
-
+       
 }
